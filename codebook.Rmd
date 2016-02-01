@@ -1,0 +1,18 @@
+Variable Name:  Variable Description
+path:  
+fileURL:  the weburl to the dataset on Human Activity Recognition Using Smartphones
+train_subject: data table containing subject data from the 'training' data set
+train_X: data table containing test data from the 'training' data set
+train_Y: data table containing activity data from the 'training' data set 
+test_subject: data table containing subject data from the 'test' data set
+test_X:  data table containing test data from the 'test' data set
+test_Y: data table containing activity data from the 'test' data set
+merged_subject: data table containing the merged subject data from the training and test data sets
+merged_X: data table containing the merged test data from the training and test data sets
+merged_Y: data table containing the merged activity data from the training and test data sets
+featureNames: variable describing the feature name corresponding to the deature no as listed in the file 'features.txt' from the source data
+merged_Subject_Y: data table that column binds the merged subject and activity data
+merged_data: data table that column binds the subject, activity and test data into a single table
+colNames_Mean_StdDev: is the subset of column names that corresponds to either the mean, or standard deviation of each variable
+dataTable_mean_stdDev: is the subset of the merged data, that only contains the test data corresponds to mean or standard deviation
+dataTable_mean_stdDev_Aggr: data table that contains the average of each variable for each activity and each subject 
