@@ -4,6 +4,7 @@
 --------------------------------------
 --------------------------------------
   > step 1: download the code file '' to your current working directory in R 
+  
   > step 2: source the file 'run_analysis.R'
   
 
