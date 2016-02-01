@@ -1,6 +1,6 @@
 #Step 0: Preliminary checks and data download
 
-path <- "/Users/kmamidi/R/RProgramming/data/Getting and Cleaning Data/project"
+path <- getwd()
 setwd(path)
 if (!file.exists("./srcData.zip")) {
         fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
@@ -35,14 +35,9 @@ if (!file.exists("./srcData.zip")) {
         tmpPath <- file.path(path, "UCI HAR Dataset", "test", "Y_test.txt")
         test_Y <- tbl_df(read.table(tmpPath))
         
-#Step 1c: add column testType to the data, to indicate wheter the row is test/training data
-        
+#Step 1c: add column 'testType' to the subject data, to indicate wheter the row corresponds to test/training data
         train_subject <- mutate(train_subject, testType = "Training Data")
-        #train_X <- mutate(train_X, testType = "Training Data")
-        #train_Y <- mutate(train_Y, testType = "Training Data")
         test_subject <- mutate(test_subject, testType = "Test Data")
-        #test_X <- mutate(test_X, testType = "Test Data")
-        #test_Y <- mutate(test_Y, testType = "Test Data")
         
 #Step 1d: read the necessary data into data tables
         merged_subject <- rbind(train_subject, test_subject)
